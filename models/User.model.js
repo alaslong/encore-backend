@@ -5,7 +5,7 @@ const userSchema = new Schema(
   {
     email: {
       type: String,
-      required: [true, "Email is required."],
+      required: [true, "Email address is required."],
       unique: true,
       lowercase: true,
       trim: true,
@@ -18,6 +18,22 @@ const userSchema = new Schema(
       type: String,
       required: [true, "Name is required."],
     },
+    type: {
+      type: String,
+      enum: ['manager', 'employee', 'serviceProvider']
+    },
+    company: {
+      type: Schema.Types.ObjectId,
+      ref: 'Company'
+    },
+    team: {
+      type: Schema.Types.ObjectId,
+      ref: 'Team'
+    },
+    service_provider: {
+      type: Schema.Types.ObjectId,
+      ref: 'ServiceProvider'
+    }
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
