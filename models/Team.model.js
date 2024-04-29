@@ -14,6 +14,10 @@ const teamSchema = new Schema(
       type: Number,
       required: [true, "Budget (per member) is required."],
     },
+    company: {
+        type: Schema.Types.ObjectId,
+        ref: 'Company'
+      },
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

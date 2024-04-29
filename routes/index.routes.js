@@ -28,7 +28,7 @@ router.get("/company" , (req, res, next) => {
 })
 
 // GET /api/company/:id - get company by ID
-router.get("/company/:id"), (req, res, next) => {
+router.get("/company/:id", (req, res, next) => {
   
   const {id} = req.params;
 
@@ -41,10 +41,10 @@ router.get("/company/:id"), (req, res, next) => {
       next(err);
     })
 
-}
+})
 
 // GET /api/company/:id/teams - get teams of company
-router.get("/company/:id/teams"), (req, res, next) => {
+router.get("/company/:id/teams", (req, res, next) => {
   
   const {id} = req.params;
 
@@ -57,10 +57,10 @@ router.get("/company/:id/teams"), (req, res, next) => {
       next(err);
     })
 
-}
+})
 
 // GET /api/company/:id/bookings - get bookings of company
-router.get("/company/:id/bookings"), (req, res, next) => {
+router.get("/company/:id/bookings", (req, res, next) => {
   
   const {id} = req.params;
 
@@ -73,7 +73,7 @@ router.get("/company/:id/bookings"), (req, res, next) => {
       next(err);
     })
 
-}
+})
 
 // POST /api/company/ - create new company
 router.post("/company", (req, res, next) => {
@@ -107,7 +107,7 @@ router.get("/team" , (req, res, next) => {
 })
 
 // GET /api/team/:id - get team by ID
-router.get("/team/:id"), (req, res, next) => {
+router.get("/team/:id", (req, res, next) => {
   
   const {id} = req.params;
 
@@ -120,10 +120,10 @@ router.get("/team/:id"), (req, res, next) => {
       next(err);
     })
 
-}
+})
 
 // GET /api/team/:id/members - get members of team
-router.get("/team/:id/members"), (req, res, next) => {
+router.get("/team/:id/members", (req, res, next) => {
   
   const {id} = req.params;
 
@@ -136,10 +136,10 @@ router.get("/team/:id/members"), (req, res, next) => {
       next(err);
     })
 
-}
+})
 
 // GET /api/team/:id/bookings - get bookings of team
-router.get("/team/:id/bookings"), (req, res, next) => {
+router.get("/team/:id/bookings", (req, res, next) => {
   
   const {id} = req.params;
 
@@ -152,7 +152,7 @@ router.get("/team/:id/bookings"), (req, res, next) => {
       next(err);
     })
 
-}
+})
 
 // POST /api/team/ - create new team
 router.post("/team", (req, res, next) => {
@@ -185,7 +185,7 @@ router.get("/provider" , (req, res, next) => {
 })
 
 // GET /api/provider/:id - get provider by ID
-router.get("/provider/:id"), (req, res, next) => {
+router.get("/provider/:id", (req, res, next) => {
   
   const {id} = req.params;
 
@@ -198,10 +198,10 @@ router.get("/provider/:id"), (req, res, next) => {
       next(err);
     })
 
-}
+})
 
 // GET /api/provider/:id/events - get events of provider
-router.get("/provider/:id/events"), (req, res, next) => {
+router.get("/provider/:id/events", (req, res, next) => {
   
   const {id} = req.params;
 
@@ -214,10 +214,10 @@ router.get("/provider/:id/events"), (req, res, next) => {
       next(err);
     })
 
-}
+})
 
 // GET /api/provider/:id/bookings - get bookings of provider
-router.get("/provider/:id/bookings"), (req, res, next) => {
+router.get("/provider/:id/bookings", (req, res, next) => {
   
   const {id} = req.params;
 
@@ -230,7 +230,7 @@ router.get("/provider/:id/bookings"), (req, res, next) => {
       next(err);
     })
 
-}
+})
 
 // POST /api/provider/ - create new provider
 router.post("/provider", (req, res, next) => {
@@ -263,7 +263,7 @@ router.get("/event" , (req, res, next) => {
 })
 
 // GET /api/event/:id - get event by ID
-router.get("/event/:id"), (req, res, next) => {
+router.get("/event/:id", (req, res, next) => {
   
   const {id} = req.params;
 
@@ -276,10 +276,10 @@ router.get("/event/:id"), (req, res, next) => {
       next(err);
     })
 
-}
+})
 
 // GET /api/event/:id/bookings - get bookings of event
-router.get("/event/:id/bookings"), (req, res, next) => {
+router.get("/event/:id/bookings", (req, res, next) => {
   
   const {id} = req.params;
 
@@ -292,7 +292,7 @@ router.get("/event/:id/bookings"), (req, res, next) => {
       next(err);
     })
 
-}
+})
 
 // POST /api/event/ - create new event
 router.post("/event", (req, res, next) => {
@@ -325,7 +325,7 @@ router.get("/booking" , (req, res, next) => {
 })
 
 // GET /api/booking/:id - get booking by ID
-router.get("/booking/:id"), (req, res, next) => {
+router.get("/booking/:id", (req, res, next) => {
   
   const {id} = req.params;
 
@@ -338,7 +338,7 @@ router.get("/booking/:id"), (req, res, next) => {
       next(err);
     })
 
-}
+})
 
 // POST /api/booking/ - create new booking
 router.post("/booking", (req, res, next) => {
