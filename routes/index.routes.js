@@ -157,10 +157,10 @@ router.get("/team/:id/bookings", (req, res, next) => {
 // POST /api/team/ - create new team
 router.post("/team", (req, res, next) => {
 
-  const {name, description, budget_per_member} = req.body;
+  const {name, description, budget_per_member, company} = req.body;
 
   Team
-    .create({name, description, budget_per_member})
+    .create({name, description, budget_per_member, company})
     .then(newTeam => {
       res.status(201).json(newTeam)
     })
