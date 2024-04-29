@@ -20,6 +20,9 @@ const eventSchema = new Schema(
         ref: 'Provider',
         required: [true, "Provider is required"]
     },
+    image: {
+        type: String
+    }
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

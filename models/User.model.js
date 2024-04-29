@@ -20,7 +20,7 @@ const userSchema = new Schema(
     },
     type: {
       type: String,
-      enum: ['manager', 'employee', 'serviceProvider']
+      enum: ['manager', 'employee', 'provider']
     },
     company: {
       type: Schema.Types.ObjectId,
@@ -30,9 +30,9 @@ const userSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: 'Team'
     },
-    service_provider: {
+    provider: {
       type: Schema.Types.ObjectId,
-      ref: 'ServiceProvider'
+      ref: 'Provider'
     }
   },
   {

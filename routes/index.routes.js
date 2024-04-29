@@ -59,6 +59,22 @@ router.get("/company/:id/teams", (req, res, next) => {
 
 })
 
+// GET /api/company/:id/employees - get employees of company
+router.get("/company/:id/employees", (req, res, next) => {
+  
+  const {id} = req.params;
+
+  User
+    .find({company: id})
+    .then(users => {
+      res.status(200).json(users);
+    })
+    .catch(err => {
+      next(err);
+    })
+
+})
+
 // GET /api/company/:id/bookings - get bookings of company
 router.get("/company/:id/bookings", (req, res, next) => {
   
@@ -144,7 +160,7 @@ router.get("/team/:id/bookings", (req, res, next) => {
   const {id} = req.params;
 
   Booking
-    .find({company: id})
+    .find({team: id})
     .then(bookings => {
       res.status(200).json(bookings);
     })
@@ -297,10 +313,10 @@ router.get("/event/:id/bookings", (req, res, next) => {
 // POST /api/event/ - create new event
 router.post("/event", (req, res, next) => {
 
-  const {name, description, price_per_person, provider} = req.body;
+  const {name, description, price_per_person, provider, image} = req.body;
 
   Event
-    .create({name, description, price_per_person, provider})
+    .create({name, description, price_per_person, provider, image})
     .then(newEvent => {
       res.status(201).json(newEvent)
     })
